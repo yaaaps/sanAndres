@@ -1,28 +1,55 @@
 import logo from "../../assets/logo.jpg";
-import { ReactComponent as FacebookIcon } from "../../assets/facebook.svg";
+import FacebookIcon from "../../assets/facebook.svg";
+import InstagramIcon from "../../assets/instagram.svg";
+import TelephoneIcon from "../../assets/telephone.svg";
 
 function NavBar() {
   return (
-    <section className="">
-      <div className="h-7 flex justify-center items-center">
-        <h4 className="text-base">Siguenos en nuestras redes</h4>
-        <FacebookIcon />
+    <nav className="">
+      <div className="h-7 flex justify-end items-center relative px-9 borde">
+        <h4 className="font-tittle text-base w-fit absolute left-1/2 -translate-x-1/2">
+          Siguenos en nuestras redes
+        </h4>
+          <a href="#" className="h-5">
+            <img
+              src={FacebookIcon}
+              alt="Agua de Mesa San Andrés"
+              className="h-5"
+            />
+          </a>
+          <a href="#" className="h-5">
+            <img
+              src={InstagramIcon}
+              alt="Agua de Mesa San Andrés"
+              className="h-5"
+            />
+          </a>
+          <a href="#" className="h-5">
+            <img
+              src={TelephoneIcon}
+              alt="Agua de Mesa San Andrés"
+              className="h-5"
+            />
+          </a>
+          <a href="#" className="h-5">
+            <p className="italic underline text-links text-sm">946 508 111</p>
+          </a>
       </div>
-      <div className="h-24 flex justify-between items-center overflow-hidden bg-sanAndresBg px-7 text-white text-lg sticky">
+      <div className="font-tittle h-24 relative flex justify-between items-center overflow-hidden bg-sanAndresBg px-7 text-white text-lg ">
         <ul className="flex gap-8">
           <li>Nosotros</li>
           <li>¿Porque elegirnos?</li>
           <li>Proceso</li>
           <li>Nuestro Equipo</li>
         </ul>
-        <img src={logo} alt="Agua De Mesa San Andres" className="w-52" />
+        <img src={logo} alt="Agua De Mesa San Andres" className="w-52 absolute left-1/2 -translate-x-1/2" />
         <ul className="flex gap-8">
           <li>Productos y precio</li>
           <li>Promociones</li>
           <li>Preguntas frecuentes</li>
         </ul>
       </div>
-    </section>
+    </nav>
   );
 }
 

@@ -1,10 +1,14 @@
+import Landing from "./Landing.jsx";
+import Presentation from "./Presentation.jsx";
+import Layout from "../../Components/Layout";
+
 function Home() {
-  
-    return (
-      <section className="border-2 ">
-        <h1>Hello world</h1>
-      </section>
-    );
-  }
-  
-  export default Home;
+  return (
+    <Layout>
+      <Landing />
+      <Presentation />
+    </Layout>
+  );
+}
+
+export default Home;

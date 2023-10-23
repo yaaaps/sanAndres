@@ -8,6 +8,11 @@ export default {
     extend: {
       colors: {
         'sanAndresBg': '#215FAA',
+        'links': '#0645ad',
+      },
+      fontFamily: {
+        tittle : 'Blanquotey',
+        montserrat: 'Montserrat'
       }
     },
   },
