@@ -1,5 +1,6 @@
 import Landing from "./Landing.jsx";
 import Presentation from "./Presentation.jsx";
+import Bridge from "./Bridge.jsx";
 import Layout from "../../Components/Layout";
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
     <Layout>
       <Landing />
       <Presentation />
+      <Bridge />
     </Layout>
   );
 }
