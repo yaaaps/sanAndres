@@ -21,3 +21,11 @@ h4 {
 p {
   @apply text-sm font-semibold font-montserrat
 }
+
+#bridge article h4 {
+   @apply text-white font-montserrat
+}
+
+#bridge article h4 span{
+  @apply text-4xl
+}

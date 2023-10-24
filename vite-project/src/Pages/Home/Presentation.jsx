@@ -1,9 +1,14 @@
-import girl from '../../assets/girl.png'
+import girl from "../../assets/girl.png";
 
 function Presentation() {
   return (
-    <article className="flex h-screen">
-      <div className="flex flex-col gap-5 basis-2/4 justify-center px-20">
+    <section
+      className="flex h-screen"
+      style={{
+        height: "calc(100vh + 1.75rem)",
+      }}
+    >
+      <article className="flex flex-col gap-5 basis-2/4 justify-center px-20">
         <span className="flex flex-col gap-2">
           <h1>Nosotros</h1>
           <p>
@@ -27,14 +32,15 @@ function Presentation() {
             euismod tellus sit amet pulvinar{" "}
           </p>
         </span>
-      </div>
-      <picture className='basis-2/4 overflow-hidden'>
-        <img src={girl} alt="" className=''style={{
-            transform: 'translatey(-5%)',
-            width: '100%',
-        }}/>
+      </article>
+      <picture className="basis-2/4 overflow-hidden relative">
+        <img
+          src={girl}
+          alt=""
+          className="absolute top-2/4 -translate-y-[50%] w-full"
+        />
       </picture>
-    </article>
+    </section>
   );
 }
 

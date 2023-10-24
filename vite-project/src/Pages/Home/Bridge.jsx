@@ -1,10 +1,24 @@
-import WaveSVG from "../../assets/wave.jsx";
+import waveSVG from "../../assets/wave.svg";
 
 function Bridge() {
   return (
-    <div className="h-72 w-full border-2 border-black bg-sanAndresBg">
-      <WaveSVG />
-    </div>
+    <section id="bridge" className="relative w-full -mt-7">
+      <img src={waveSVG} alt="" className="w-full h-14" />
+      <article className="bg-sanAndresBg h-72">
+        <div>
+          <h4>
+            <span>326</span> <br /> SOCIOS BODEGUEROS
+          </h4>
+        </div>
+        <div>
+          <h4>CLIENTES SATISFECHOS</h4>
+        </div>
+        <div>
+          <h4>AÑOS DE EXPERIENCIA</h4>
+        </div>
+      </article>
+      <img src={waveSVG} alt="" className="w-full h-14 rotate-180" />
+    </section>
   );
 }
 

@@ -4,7 +4,7 @@ import truckSVG from "../../assets/truckSVG.svg";
 
 function Landing() {
   return (
-    <article
+    <section
       className="relative flex justify-center overflow-hidden"
       style={{
         width: "100%",
@@ -27,7 +27,7 @@ function Landing() {
         <img src={truckSVG} alt="Delivery"/>
         <p className="font-tittle text-4xl text-white">Delivery GRATIS</p>
       </div>
-    </article>
+    </section>
   );
 }
 
