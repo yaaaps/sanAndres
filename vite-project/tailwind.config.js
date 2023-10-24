@@ -12,10 +12,10 @@ export default {
       },
       fontFamily: {
         tittle : 'Blanquotey',
-        montserrat: 'Montserrat'
+        montserrat: 'Montserrat',
+        dosis: 'Dosis'
       }
     },
   },
   plugins: [],
 }
-

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,12 +22,4 @@ h4 {
 
 p {
   @apply text-sm font-semibold font-montserrat
-}
-
-#bridge article h4 {
-   @apply text-white font-montserrat
-}
-
-#bridge article h4 span{
-  @apply text-4xl
 }
