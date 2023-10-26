@@ -1,4 +1,5 @@
-import rectangulo from "../../assets/rectangulo.svg";
+import rectangulo from "../../assets/rectangle.png";
+import './assets/process.css'
 
 function Process() {
   let processCol1 = [
@@ -52,20 +53,19 @@ function Process() {
 
   return (
     <section>
-      <article className="flex flex-col items-center gap-9">
-        <h1>Nuestro Proceso</h1>
+      <article className="flex flex-col items-center gap-9 ">
+        <h1 className="">Nuestro Proceso</h1>
         <span className="flex h-[50rem] gap-16">
           <div className="flex flex-col gap-32 pb-32 pt-12">
             {processItem(processCol1)}
           </div>
           <div
-            className="w-2 bg-[#D9D9D9] rounded-full  overflow-hidden relative"
+            id="verticalSeparator"
+            className="w-2 bg-[#D9D9D9] rounded-full relative"
             style={{
-              height: "calc(300% - 8rem)",
+              height: "calc(200% - 8rem)",
             }}
-          >
-            <img src={rectangulo} className="h-6 sticky top-0" />
-          </div>
+          ></div>
           <div className="flex flex-col gap-32 pt-44">
             {processItem(processCol2)}
           </div>
