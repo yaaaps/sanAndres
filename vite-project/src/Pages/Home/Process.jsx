@@ -1,5 +1,5 @@
 import rectangulo from "../../assets/rectangle.png";
-import './assets/process.css'
+import imagen from "../../assets/fontPage.png";
 
 function Process() {
   let processCol1 = [
@@ -61,11 +61,27 @@ function Process() {
           </div>
           <div
             id="verticalSeparator"
-            className="w-2 bg-[#D9D9D9] rounded-full relative"
+            className="w-screen bg-[#D9D9D9] rounded-full overflow-hidden"
             style={{
-              height: "calc(200% - 8rem)",
+              height: "calc(100% - 8rem)",
+              backgroundImage: `url(${rectangulo})`,
+              backgroundPosition: 'center 350%',
+              backgroundRepeat: 'no-repeat',
+              backgroundAttachment: 'fixed'
             }}
-          ></div>
+          >
+            {/*
+            <div
+            id="verticalSeparator"
+            className="w-2 bg-[#D9D9D9] rounded-full overflow-hidden"
+            style={{
+              height: "calc(100% - 8rem)",
+            }}
+          >
+              <div className="h-[555px] w-full border border-black top-0">
+              <div className="h-[50vh] w-2 bg-black fixed top-0 z-[50]"></div>
+          </div>*/}
+          </div>
           <div className="flex flex-col gap-32 pt-44">
             {processItem(processCol2)}
           </div>
