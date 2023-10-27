@@ -1,5 +1,5 @@
 import rectangulo from "../../assets/rectangle.png";
-import imagen from "../../assets/fontPage.png";
+import glassOfWater from "../../assets/glassOfWater.png";
 
 function Process() {
   let processCol1 = [
@@ -44,7 +44,10 @@ function Process() {
           key={index}
           className="flex flex-col justify-center items-center gap-1 w-80"
         >
-          <h2>{x.titulo}</h2>
+          <span className="flex flex-col">
+            <img src={glassOfWater} className="h-full"/>
+            <h2>{x.titulo}</h2>
+          </span>
           <p className="font-montserrat text-center">{x.descripcion}</p>
         </div>
       </>
@@ -61,13 +64,13 @@ function Process() {
           </div>
           <div
             id="verticalSeparator"
-            className="w-screen bg-[#D9D9D9] rounded-full overflow-hidden"
+            className="w-2 bg-[#D9D9D9] rounded-full overflow-hidden"
             style={{
               height: "calc(100% - 8rem)",
               backgroundImage: `url(${rectangulo})`,
-              backgroundPosition: 'center 350%',
-              backgroundRepeat: 'no-repeat',
-              backgroundAttachment: 'fixed'
+              backgroundPosition: "center 475%",
+              backgroundRepeat: "no-repeat",
+              backgroundAttachment: "fixed",
             }}
           >
             {/*
