@@ -37,17 +37,15 @@ function Process() {
     },
   ];
 
-  function processItem(cardsArray) {
+  function processItem(cardsArray, direction) {
     return cardsArray.map((x, index) => (
       <>
         <div
           key={index}
-          className="flex flex-col justify-center items-center gap-1 w-80"
+          className="flex flex-col justify-center items-center gap-1 w-80 relative"
         >
-          <span className="flex flex-col">
-            <img src={glassOfWater} className="h-full"/>
+            <img src={glassOfWater} className={`absolute top-1/2 -translate-y-1/2 ${direction}`}/>
             <h2>{x.titulo}</h2>
-          </span>
           <p className="font-montserrat text-center">{x.descripcion}</p>
         </div>
       </>
@@ -60,33 +58,22 @@ function Process() {
         <h1 className="">Nuestro Proceso</h1>
         <span className="flex h-[50rem] gap-16">
           <div className="flex flex-col gap-32 pb-32 pt-12">
-            {processItem(processCol1)}
+            {processItem(processCol1, 'right-[-5.5rem]')}
           </div>
           <div
             id="verticalSeparator"
             className="w-2 bg-[#D9D9D9] rounded-full overflow-hidden"
             style={{
-              height: "calc(100% - 8rem)",
+              height: "calc(100% - 4rem)",
               backgroundImage: `url(${rectangulo})`,
-              backgroundPosition: "center 475%",
+              backgroundPosition: "center -32em",
               backgroundRepeat: "no-repeat",
               backgroundAttachment: "fixed",
             }}
           >
-            {/*
-            <div
-            id="verticalSeparator"
-            className="w-2 bg-[#D9D9D9] rounded-full overflow-hidden"
-            style={{
-              height: "calc(100% - 8rem)",
-            }}
-          >
-              <div className="h-[555px] w-full border border-black top-0">
-              <div className="h-[50vh] w-2 bg-black fixed top-0 z-[50]"></div>
-          </div>*/}
           </div>
           <div className="flex flex-col gap-32 pt-44">
-            {processItem(processCol2)}
+            {processItem(processCol2, 'left-[-5.5rem]')}
           </div>
         </span>
       </article>
