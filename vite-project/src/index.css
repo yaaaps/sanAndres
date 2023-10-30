@@ -35,3 +35,7 @@ p {
 #bridge span:last-child{
   display: none;
 }
+
+footer span h2, footer span h4 {
+  color: white !important;
+}
