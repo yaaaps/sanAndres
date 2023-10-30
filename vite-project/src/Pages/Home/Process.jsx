@@ -53,8 +53,8 @@ function Process() {
   }
 
   return (
-    <section>
-      <article className="flex flex-col items-center gap-9 ">
+    <section className="">
+      <article className="flex flex-col items-center gap-9">
         <h1 className="">Nuestro Proceso</h1>
         <span className="flex h-[50rem] gap-16">
           <div className="flex flex-col gap-32 pb-32 pt-12">

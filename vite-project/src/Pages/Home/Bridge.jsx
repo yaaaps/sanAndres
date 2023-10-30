@@ -1,4 +1,5 @@
 import waveSVG from "../../assets/wave.svg";
+import waveBottom from "../../assets/waveBottom.svg";
 import sociosSVG from "../../assets/socios.svg";
 import consumerSVG from "../../assets/consumer.svg";
 import starSVG from "../../assets/star.svg";
@@ -30,14 +31,25 @@ function Bridge() {
 
   return (
     <section id="bridge" className="relative w-full -mt-7">
-      <img src={waveSVG} alt="" className="w-full h-14" />
+      <img
+        src={waveSVG}
+        alt=""
+        className="w-full h-14"
+        style={{
+          fill: "linear-gradient(to right, #215FAA, rgba(33, 95, 170, 0.85)) !important",
+        }}
+      />
       <article
         id="bridge"
-        className="bg-sanAndresBg h-72 flex gap-36 justify-center items-center"
+        className="h-72 flex gap-36 justify-center items-center"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #215FAA, rgba(33, 95, 170, 0.85))",
+        }}
       >
         {card(cards)}
       </article>
-      <img src={waveSVG} alt="" className="w-full h-14 rotate-180" />
+      <img src={waveBottom} alt="" className="w-full h-14 rotate-180" />
     </section>
   );
 }

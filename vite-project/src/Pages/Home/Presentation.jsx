@@ -3,7 +3,7 @@ import girl from "../../assets/girl.png";
 function Presentation() {
   return (
     <section
-      className="flex h-screen"
+      className="flex"
       style={{
         height: "calc(100vh + 1.75rem)",
       }}
@@ -33,7 +33,7 @@ function Presentation() {
           </p>
         </span>
       </article>
-      <picture className="basis-2/4 overflow-hidden relative">
+      <picture className="basis-2/4 overflow-hidden relative ">
         <img
           src={girl}
           alt=""

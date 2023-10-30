@@ -7,7 +7,6 @@
 
 h1,
 h2,
-h3,
 h4,
 button {
   @apply font-tittle;
@@ -19,6 +18,10 @@ h1{
 
 h2{
   @apply text-3xl text-sanAndresBg
+}
+
+h3{
+  @apply font-montserrat
 }
 
 h4 {

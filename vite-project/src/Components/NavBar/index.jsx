@@ -35,7 +35,8 @@ function NavBar() {
           <p className="italic underline text-links text-sm">946 508 111</p>
         </a>
       </div>
-      <nav className=" font-tittle h-24 relative flex justify-between items-center overflow-hidden bg-sanAndresBg px-7 text-white text-lg ">
+      <nav className=" font-tittle h-[5.5rem] flex justify-between items-center overflow-hidden bg-sanAndresBg px-7 text-white text-lg ">
+        {/* sticky top-0 z-[1] Agregar al label 'nav', y tambien la cualidad de que aparezca SOLO cuando se haga scroll hacia arriba */}
         <ul className="flex gap-8">
           <li>Nosotros</li>
           <li>¿Porque elegirnos?</li>
@@ -46,6 +47,9 @@ function NavBar() {
           src={logo}
           alt="Agua De Mesa San Andres"
           className="w-52 absolute left-1/2 -translate-x-1/2"
+          style={{
+            top: '-3.9rem'
+          }}
         />
         <ul className="flex gap-8">
           <li>Productos y precio</li>
@@ -53,7 +57,6 @@ function NavBar() {
           <li>Preguntas frecuentes</li>
         </ul>
       </nav>
-      {/* sticky top-0 z-[1] - > Agregar al nav y modificar su height*/}
     </>
   );
 }
