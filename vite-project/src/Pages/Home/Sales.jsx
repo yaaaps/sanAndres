@@ -68,7 +68,7 @@ function Sales() {
       }}
     >
       <h1 className="">Realiza Tu Pedido</h1>
-      <article id="buySteps" className="flex h-full">
+      <article id="buySteps" className="flex h-full ">
         {stepArr.map((x) => x)}
       </article>
     </section>
