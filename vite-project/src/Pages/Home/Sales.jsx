@@ -1,4 +1,4 @@
-import Button from '../../Components/Button';
+import Button from "../../Components/Button";
 import uno from "../../assets/1.svg";
 import dos from "../../assets/2.svg";
 import tres from "../../assets/3.svg";
@@ -15,7 +15,7 @@ function Sales() {
       tittle: "Elige el/los producto(s) que deseas comprar",
       description: "Elije el/los producto(s) y conoce su precio.",
       background: sirviendo,
-      button: <Button text='Empezar' width='105px'/>
+      button: <Button text="Empezar" width="105px" />,
     },
     {
       step: dos,
@@ -62,13 +62,13 @@ function Sales() {
 
   return (
     <section
-      className="flex flex-col items-center content-center max-w-full gap-16 border"
+      className="flex flex-col items-center content-center max-w-full gap-16"
       style={{
         height: "calc(95vh)",
       }}
     >
       <h1 className="">Realiza Tu Pedido</h1>
-      <article id="buySteps" className="flex h-full ">
+      <article id="buySteps" className="flex h-full">
         {stepArr.map((x) => x)}
       </article>
     </section>

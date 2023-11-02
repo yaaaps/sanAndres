@@ -44,7 +44,7 @@ function Bridge() {
         className="h-72 flex gap-36 justify-center items-center"
         style={{
           backgroundImage:
-            "linear-gradient(to right, #215FAA, rgba(33, 95, 170, 0.85))",
+            "linear-gradient(to right, #215FAA, #5D93D5)",
         }}
       >
         {card(cards)}

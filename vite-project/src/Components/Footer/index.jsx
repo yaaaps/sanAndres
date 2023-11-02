@@ -1,17 +1,6 @@
+import Faq from "./Faq";
+
 function Footer() {
-  let preguntas = [
-    { titulo: "¿Llegan hasta mi hogar?", respuesta: "respuesta" },
-    { titulo: "¿Entregan factura?", respuesta: "respuesta" },
-    { titulo: "¿Pregunta3?", respuesta: "respuesta" },
-    { titulo: "¿Pregunta4?", respuesta: "respuesta" },
-  ];
-
-  let pregunta = preguntas.map((x) => (
-    <li>
-      <h4>{x.titulo}</h4>
-    </li>
-  ));
-
   let vendedores = [
     {
       nombre: "Giomara",
@@ -36,10 +25,7 @@ function Footer() {
     <>
       <footer className="max-w-full bg-sanAndresBg flex justify-center items-center py-8">
         <span className="flex justify-between items-center text-white w-10/12 max-w-7xl">
-          <div className="flex flex-col gap-2">
-            <h2>Preguntas frecuentes</h2>
-            <ul className="flex flex-col gap-1">{pregunta.map((x) => x)}</ul>
-          </div>
+          <Faq />
           <iframe
             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100063555131987&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
             width="340"

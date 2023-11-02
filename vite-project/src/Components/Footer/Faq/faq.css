@@ -1,0 +1,14 @@
+.question{
+    border: 1px solid white;
+    
+    @apply h-7 overflow-hidden duration-700 
+}
+
+.question-h4::before {
+  content: "";
+  border-style: solid;
+  border-width: 0.4rem 0.6rem 0.4rem 0;
+  border-color: transparent white transparent transparent;
+
+  @apply absolute top-1/2 -translate-y-1/2 right-0 cursor-pointer duration-700 ;
+}

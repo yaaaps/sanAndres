@@ -1,5 +1,6 @@
 import rectangulo from "../../assets/rectangle.png";
 import glassOfWater from "../../assets/glassOfWater.png";
+import './assets/process.css';
 
 function Process() {
   let processCol1 = [
@@ -37,43 +38,71 @@ function Process() {
     },
   ];
 
-  function processItem(cardsArray, direction) {
+  function processItem(cardsArray, directionRem, direction) {
     return cardsArray.map((x, index) => (
-      <>
-        <div
-          key={index}
-          className="flex flex-col justify-center items-center gap-1 w-80 relative"
-        >
-            <img src={glassOfWater} className={`absolute top-1/2 -translate-y-1/2 ${direction}`}/>
-            <h2>{x.titulo}</h2>
+      <div
+        key={index}
+        className="flex flex-col justify-center items-center gap-1 w-80 relative text-center"
+      >
+        <span id="process" className={`p-4 ${direction}`}>
+          <h2>{x.titulo}</h2>
           <p className="font-montserrat text-center">{x.descripcion}</p>
-        </div>
-      </>
+        </span>
+        <img
+          src={glassOfWater}
+          id="processImage"
+          className={`absolute top-[1.12rem] ${directionRem}`}
+        />
+      </div>
     ));
   }
+
+  window.addEventListener("scroll", () => {
+    let processContainer = document.querySelectorAll("#process");
+    let processImage = document.querySelectorAll("#processImage");
+
+    processContainer.forEach((x) => {
+      let y = x.getBoundingClientRect();
+      if (y.top < window.innerHeight * 0.5) {
+        x.classList.add("processActivado");
+        x.classList.contains("left") ? x.classList.add("processActivadoIzquierda") : x.classList.add("processActivadoDerecha")
+      } else {
+        x.classList.remove("processActivado");
+
+      }
+    });
+    processImage.forEach((x) => {
+      let y = x.getBoundingClientRect();
+      if (y.top > window.innerHeight * 0.52) {
+        x.classList.add("processImageActivado");
+      } else {
+        x.classList.remove("processImageActivado");
+      }
+    });
+
+  });
 
   return (
     <section className="">
       <article className="flex flex-col items-center gap-9">
         <h1 className="">Nuestro Proceso</h1>
-        <span className="flex h-[50rem] gap-16">
-          <div className="flex flex-col gap-32 pb-32 pt-12">
-            {processItem(processCol1, 'right-[-5.5rem]')}
+        <span className="flex h-[70rem] gap-16">
+          <div className="flex flex-col gap-[12rem] pb-32 pt-16">
+            {processItem(processCol1, "right-[-5.5rem]")}
           </div>
           <div
             id="verticalSeparator"
             className="w-2 bg-[#D9D9D9] rounded-full overflow-hidden"
             style={{
-              height: "calc(100% - 4rem)",
+              height: "calc(100% - 8rem)",
               backgroundImage: `url(${rectangulo})`,
-              backgroundPosition: "center -32em",
+              backgroundPosition: "center -25rem",
               backgroundRepeat: "no-repeat",
               backgroundAttachment: "fixed",
             }}
-          >
-          </div>
-          <div className="flex flex-col gap-32 pt-44">
-            {processItem(processCol2, 'left-[-5.5rem]')}
+          ></div>
+          <div className="flex flex-col gap-[12rem] pt-60">
+            {processItem(processCol2, "left-[-5.5rem]", 'left')}
           </div>
         </span>
       </article>

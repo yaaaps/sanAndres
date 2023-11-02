@@ -8,7 +8,7 @@ function Landing() {
       className="relative flex justify-center overflow-hidden"
       style={{
         width: "100%",
-        height: "calc(100vh - 124px)",
+        height: "calc(100vh - 113px)",
         backgroundColor: "black",
       }}
     >
